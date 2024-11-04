@@ -3,19 +3,16 @@ import styled from "styled-components";
 export const InputWrapper = styled.div`
   display: flex;
   align-items: center;
-  position: relative;
+  flex-direction: column;
+  padding: 0 1.5rem;
   margin-bottom: 20px;
-  width: 100%;
+  gap: 1rem;
+
+  p{
+    color: red;
+  }
 `;
 
-export const Icon = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 10px;
-  color: #9b51e0;
-`;
 
 export const InputField = styled.input`
   background: none;
@@ -23,7 +20,6 @@ export const InputField = styled.input`
   border: 1px solid #333;
   border-radius: 20px;
   padding: 10px 10px 10px 40px;
-  color: #fff;
   font-size: 1rem;
   outline: none;
   width: 100%;

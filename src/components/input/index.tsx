@@ -7,9 +7,10 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<any>;
+  errorMessage?: string;
 }
 
-export const Input = ({ placeholder, name, control, ...props }: InputProps) => {
+export const Input = ({ placeholder, errorMessage, name, control, ...props }: InputProps) => {
   return (
     <InputWrapper>
       <Controller
@@ -25,7 +26,8 @@ export const Input = ({ placeholder, name, control, ...props }: InputProps) => {
         )}
         control={control}
         name={name}
-      ></Controller>
+      />
+      {errorMessage ? <p>{errorMessage}</p> : ""}
     </InputWrapper>
   );
 };
