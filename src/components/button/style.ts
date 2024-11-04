@@ -17,5 +17,9 @@ export const StyledButton = styled.button`
     cursor: pointer;
   }
 
-
+  &:disabled {
+    background-color: #7f7f84;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 `;

@@ -1,10 +1,10 @@
+import * as yup from "yup";
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+
 import Button from "../../components/button";
 import { Input } from "../../components/input";
 import { Container, LoginContainer } from "./style";
-
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
 
 const schema = yup
   .object({
@@ -25,7 +25,7 @@ export const Login = () => {
 
   // const form = watch();
 
-  console.log(errors);
+  console.log(isValid);
   return (
     <Container>
       <LoginContainer>
@@ -43,7 +43,7 @@ export const Login = () => {
           control={control}
           type="password"
         />
-        <Button>Entrar</Button>
+        <Button isValid={isValid}>Entrar</Button>
       </LoginContainer>
     </Container>
   );

@@ -8,11 +8,10 @@ export const InputWrapper = styled.div`
   margin-bottom: 20px;
   gap: 1rem;
 
-  p{
+  p {
     color: red;
   }
 `;
-
 
 export const InputField = styled.input`
   background: none;

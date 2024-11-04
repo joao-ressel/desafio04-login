@@ -1,6 +1,7 @@
 import React from "react";
-import { InputField, InputWrapper } from "./style";
 import { Control, Controller } from "react-hook-form";
+
+import { InputField, InputWrapper } from "./style";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   placeholder: string;

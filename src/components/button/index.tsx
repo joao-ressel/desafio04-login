@@ -1,11 +1,16 @@
 import { StyledButton } from "./style";
 
 interface ButtonProps {
-  children: React.ReactNode; 
+  children: React.ReactNode;
+  isValid: boolean;
 }
 
-export const Button = ({ children, ...props }: ButtonProps) => {
-  return <StyledButton {...props}>{children}</StyledButton>;
+export const Button = ({ children, isValid, ...props }: ButtonProps) => {
+  return (
+    <StyledButton disabled={!isValid} {...props}>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;
